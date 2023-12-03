@@ -232,8 +232,21 @@ for ax in [ax1, ax2]:
     ax.xaxis.set_label_position("top")
 
 
-# In[32]:
 
+# In[32]:
+dfnew = df.drop(['AVTX', 'BVTX','CILD','CNDL','CNLS', 'CNSS','LSPD','LTEN'], axis = 1)
+
+cor1 = dfnew.corr() # correlations as table
+# Increase the size of the heatmap.
+plt.figure(figsize=(16, 6))
+# Store heatmap object in a variable to easily access it when you want to include more features (such as title).
+# Set the range of values to be displayed on the colormap from -1 to 1, and set the annotation to True to display the correlation values on the heatmap.
+heatmap = sns.heatmap(dfnew.corr(), vmin=-1, vmax=1, annot=True)
+# Give a title to the heatmap. Pad defines the distance of the title from the top of the heatmap.
+heatmap.set_title('Log Properties Correlation Heatmap', fontdict={'fontsize':12}, pad=12);
+
+
+# In[ ]:
 
 # Function to calculate V-Shale (using Gamma Ray log)
 def calculate_vshale(gamma_ray, gamma_ray_max, gamma_ray_min):
