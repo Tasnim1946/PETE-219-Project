@@ -7,7 +7,6 @@
 
 # In[1]:
 
-
 import lasio as las
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -245,6 +244,12 @@ heatmap = sns.heatmap(dfnew.corr(), vmin=-1, vmax=1, annot=True)
 # Give a title to the heatmap. Pad defines the distance of the title from the top of the heatmap.
 heatmap.set_title('Log Properties Correlation Heatmap', fontdict={'fontsize':12}, pad=12);
 
+X1 = df['DT']
+Y1 = df['CNPOR']
+plt.scatter(X1,Y1)
+plt.xlabel('independent')
+plt.ylabel('dependent')
+plt.show()
 
 # In[ ]:
 
