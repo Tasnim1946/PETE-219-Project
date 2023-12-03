@@ -7,3 +7,6 @@ Ayah Abdulla
 Tasnim Ahsan 
 Wadha AlDosari
 Ghalya AlKaabi
+
+Instructors: 
+Thomas seers
